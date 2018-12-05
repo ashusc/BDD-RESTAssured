@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<!--
+		Author: Ashutosh Mishra [NNGExperimental]
+		Sample Project for "BDD with Rest-Assured" 
+	-->
+  	<groupId>org.nng.automation.sample</groupId>
+  	<artifactId>BDD-RESTAssured</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>jar</packaging>
+
+  	<name>BDD-RESTAssured</name>
+  	<url>http://maven.apache.org</url>
+
+	<!-- Maven Project Variables -->
+  	<properties>
+    		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    		<logback.core.version>			1.2.3 </logback.core.version>
+		<logback.classic.version>		1.2.3 </logback.classic.version>
+		<cucumber.java.version>			4.2.0</cucumber.java.version>
+    		<junit.version>					4.12	 </junit.version>
+		<restAssured.version>			3.2.0</restAssured.version>
+		<restAssured.jsonPath.version>	3.2.0</restAssured.jsonPath.version>
+		<restAssured.xmlPath.version>	3.2.0</restAssured.xmlPath.version>
+		<restAssured.jsonSchemaValidator.version>	3.2.0</restAssured.jsonSchemaValidator.version>
+		
+  	</properties>
+
+	<!-- Maven Project Dependencies -->
+  	<dependencies>
+  	
+  		<!-- Without java8 lambda exp -->
+	  	<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-java</artifactId>
+		    <!-- If you want to use java8 lamda <artifactId>cucumber-java8</artifactId> -->
+		    <version>${cucumber.java.version}</version>
+		    <scope>test</scope>
+		</dependency>
+		
+  		<!-- REST ASSURED -->
+	  	<dependency>
+	      	<groupId>io.rest-assured</groupId>
+	      	<artifactId>rest-assured</artifactId>
+	      	<version>${restAssured.version}</version>
+	      	<scope>test</scope>
+		</dependency>
+  	
+  		<!-- JSON Path Required for rest assured -->
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-path</artifactId>
+		      <version>${restAssured.jsonPath.version}</version>
+		</dependency>  	
+		
+		<!-- Xml Path required for the rest assured -->
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>xml-path</artifactId>
+		      <version>${restAssured.xmlPath.version}</version>
+		</dependency>
+		
+		<!-- JSON Schema (Good to have) -->
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-schema-validator</artifactId>
+		      <version>${restAssured.jsonSchemaValidator.version}</version>
+		      <scope>test</scope>
+		</dependency>
+		
+  		<!-- JUnit (Adding Extra) -->
+    		<dependency>
+      		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+      		<version>${junit.version}</version>
+      		<scope>test</scope>
+    		</dependency>
+    		
+    		<!-- End of dependencies entry -->
+  	</dependencies>
+ 
+</project>
