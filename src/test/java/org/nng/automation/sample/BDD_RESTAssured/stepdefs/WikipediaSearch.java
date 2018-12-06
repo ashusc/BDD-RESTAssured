@@ -1,5 +1,5 @@
 // Package
-package org.nng.automation.sample.BDD_RESTAssured;
+package org.nng.automation.sample.BDD_RESTAssured.stepdefs;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

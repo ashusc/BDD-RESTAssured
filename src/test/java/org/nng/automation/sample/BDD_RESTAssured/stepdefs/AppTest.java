@@ -1,4 +1,4 @@
-package org.nng.automation.sample.BDD_RESTAssured;
+package org.nng.automation.sample.BDD_RESTAssured.stepdefs;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
