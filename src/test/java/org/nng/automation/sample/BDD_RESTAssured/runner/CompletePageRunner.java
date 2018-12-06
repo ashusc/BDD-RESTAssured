@@ -14,10 +14,10 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	plugin		= {"json:reports/cucumber.json"},
-	features		= { "src/test/resources/features/" }, 
+	features		= { "src/test/resources/" }, 
 	glue 		= {"org.nng.automation.sample.BDD_RESTAssured" },
 	dryRun 		= false,
-	tags		= { "not @End2End", "not @Deprecated", "not @Pending", "not @Onboard"},
+	tags		= { "@Test1" },
 	monochrome 	= true
 )
 
