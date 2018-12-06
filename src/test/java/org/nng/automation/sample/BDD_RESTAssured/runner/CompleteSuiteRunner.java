@@ -22,6 +22,6 @@ import cucumber.api.junit.Cucumber;
 )
 
 // Runner Class
-public class CompletePageRunner {
+public class CompleteSuiteRunner {
 	
 }
