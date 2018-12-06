@@ -31,7 +31,14 @@
 	<!-- Maven Project Dependencies -->
   	<dependencies>
   	
-  		<!-- Without java8 lambda exp -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>3.14.0</version>
+		</dependency>
+  	
+  		<!-- Cucumber -->
 	  	<dependency>
 		    <groupId>io.cucumber</groupId>
 		    <artifactId>cucumber-java</artifactId>
@@ -70,6 +77,14 @@
 		      <scope>test</scope>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-junit</artifactId>
+		    <version>1.2.5</version>
+		    <scope>test</scope>
+		</dependency>
+				
   		<!-- JUnit (Adding Extra) -->
     		<dependency>
       		<groupId>junit</groupId>
