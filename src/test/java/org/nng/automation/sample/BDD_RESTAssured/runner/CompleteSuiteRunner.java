@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 	features		= { "src/test/resources/" }, 
 	glue 		= {"org.nng.automation.sample.BDD_RESTAssured" },
 	dryRun 		= false,
-	tags		= { "@Test1" },
+	tags		= { "@API" },
 	monochrome 	= true
 )
 
