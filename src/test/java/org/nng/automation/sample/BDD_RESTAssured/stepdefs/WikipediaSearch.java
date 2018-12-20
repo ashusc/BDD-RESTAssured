@@ -60,6 +60,7 @@ public class WikipediaSearch {
 	@When("^he request with a search key \"([^\"]*)\"$")
 	public void user_searchInWikipedia_withSearchKey(String searchKey) throws Throwable {
 		System.out.println("RESPONSE [HEADERS] >>> \n\n" + this.resp);
+		System.out.println("\n\n");
 	}
 	
 	// Get and matcht the result
@@ -67,6 +68,13 @@ public class WikipediaSearch {
 	@Then("^he should see the results related with that search key$")
 	public void aUsershouldSeeTheResult() throws Throwable {
 		System.out.println("EXPECTATION >>> \n\n ...");
+		
+		// Asserting a status code
+		given().
+		when().
+			get("https://www.wikipedia.org/").
+		then().
+			assertThat().statusCode(200);
 	}
 	
 	

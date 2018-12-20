@@ -22,7 +22,7 @@ import cucumber.api.junit.Cucumber;
 public class CompleteSuiteRunner {
 	
 	@BeforeClass
-	public void beforeAll() throws Throwable {
+	public static void beforeAll() throws Throwable {
 		
 	}
 }
