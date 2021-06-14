@@ -5,13 +5,30 @@
       {
         "name": "he request with a search key \"Earth\"",
         "aggregatedDurations": {
-          "average": 0.001428496,
-          "median": 0.001428496
+          "average": 0.001081431,
+          "median": 0.001081431
         },
         "durations": [
           {
-            "duration": 0.001428496,
+            "duration": 0.001910303,
             "location": "WikiSearch.feature:10"
+          },
+          {
+            "duration": 0.00025256,
+            "location": "WikiSearch.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "he request with a search key \"Mars Planet\"",
+        "aggregatedDurations": {
+          "average": 0.00034541,
+          "median": 0.00034541
+        },
+        "durations": [
+          {
+            "duration": 0.00034541,
+            "location": "WikiSearch.feature:16"
           }
         ]
       }
@@ -23,13 +40,21 @@
       {
         "name": "he should see the results related with that search key",
         "aggregatedDurations": {
-          "average": 0.000074168,
-          "median": 0.000074168
+          "average": 0.000089021,
+          "median": 0.000085889
         },
         "durations": [
           {
-            "duration": 0.000074168,
+            "duration": 0.000111064,
             "location": "WikiSearch.feature:11"
+          },
+          {
+            "duration": 0.00007011,
+            "location": "WikiSearch.feature:17"
+          },
+          {
+            "duration": 0.000085889,
+            "location": "WikiSearch.feature:17"
           }
         ]
       }
@@ -41,13 +66,21 @@
       {
         "name": "User has access of wikipedia as a \"Normal User\" to search",
         "aggregatedDurations": {
-          "average": 2.945441359,
-          "median": 2.945441359
+          "average": 1.468042553,
+          "median": 0.794746367
         },
         "durations": [
           {
-            "duration": 2.945441359,
+            "duration": 2.902683411,
             "location": "WikiSearch.feature:9"
+          },
+          {
+            "duration": 0.706697881,
+            "location": "WikiSearch.feature:15"
+          },
+          {
+            "duration": 0.794746367,
+            "location": "WikiSearch.feature:15"
           }
         ]
       }
