@@ -9,10 +9,10 @@
 		Description: 
 	-->
   	<groupId>org.nng.automation.sample</groupId>
-  	<artifactId>Cucumber-RestAssured</artifactId>
+  	<artifactId>cucumberRestAssured</artifactId>
   	<version>1.0.1</version>
   	<packaging>jar</packaging>
-  	<name>Cucumber-RestAssured</name>
+  	<name>Cucumber RestAssured</name>
   	<url>http://maven.apache.org</url>
 
 	<!-- Maven Variables for dependency versions-->
@@ -47,14 +47,17 @@
 			
 			<!-- MVN Compiler for source and target : "mvn compile" or "mvn test-compile" -->
 			<plugin>
+				<inherited>true</inherited>
 				<groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-compiler-plugin</artifactId>
 		        <version>3.8.1</version>
+		        <!-- put your configurations here;
+		        	Since we are inheriting the compiler version from the system, so choosing not to specify 
 		        <configuration>
-		            <!-- put your configurations here -->
 		            <source>1.8.0</source>
 		            <target>1.8.0</target>
 		        </configuration>
+		        -->
 			</plugin>
 			
 			<!-- MVN Surefire which execute the provided code/source: "mvn test" -->

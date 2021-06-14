@@ -1,5 +1,5 @@
 // Package
-package org.nng.automation.sample.BDD_RESTAssured.stepdefs;
+package org.nng.automation.sample.cucumberRestAssured.stepdefs;
 
 //Import Section
 import org.openqa.selenium.WebDriver;
