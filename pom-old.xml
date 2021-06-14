@@ -8,11 +8,11 @@
 		Sample Project for "BDD with Rest-Assured" 
 	-->
   	<groupId>org.nng.automation.sample</groupId>
-  	<artifactId>BDD-RESTAssured</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
+  	<artifactId>Cucumber-RestAssured</artifactId>
+  	<version>1.0.1</version>
   	<packaging>jar</packaging>
 
-  	<name>BDD-RESTAssured</name>
+  	<name>Cucumber-RestAssured</name>
   	<url>http://maven.apache.org</url>
 
 	<!-- Maven Project Variables -->
