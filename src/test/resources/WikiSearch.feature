@@ -1,10 +1,10 @@
-@Test1
+@Test1 @API
 Feature: Wikipedia via REST-Assured
 	In order to access the wikipedia search results
 	As normal users with a search key
 	I should get all the search results for that search key
 
-	@Positive @API 
+	@Positive 
 	Scenario: T001- Simple Search 
 		Given User has access of wikipedia as a "Normal User" to search
 		When he request with a search key "Earth"

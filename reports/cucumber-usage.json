@@ -1,0 +1,56 @@
+[
+  {
+    "source": "^he request with a search key \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "he request with a search key \"Earth\"",
+        "aggregatedDurations": {
+          "average": 0.001428496,
+          "median": 0.001428496
+        },
+        "durations": [
+          {
+            "duration": 0.001428496,
+            "location": "WikiSearch.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^he should see the results related with that search key$",
+    "steps": [
+      {
+        "name": "he should see the results related with that search key",
+        "aggregatedDurations": {
+          "average": 0.000074168,
+          "median": 0.000074168
+        },
+        "durations": [
+          {
+            "duration": 0.000074168,
+            "location": "WikiSearch.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^User has access of wikipedia as a \"([^\"]*)\" to search$",
+    "steps": [
+      {
+        "name": "User has access of wikipedia as a \"Normal User\" to search",
+        "aggregatedDurations": {
+          "average": 2.945441359,
+          "median": 2.945441359
+        },
+        "durations": [
+          {
+            "duration": 2.945441359,
+            "location": "WikiSearch.feature:9"
+          }
+        ]
+      }
+    ]
+  }
+]
