@@ -9,6 +9,9 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 // REST ASSURED
 import static io.restassured.RestAssured.*;
@@ -16,7 +19,7 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 // Class
-public class WikipediaSearch {
+public class WikipediaSearch extends TestCase{
 
 	// ==========================
 	// =======[ GLOBALS ]========
@@ -69,12 +72,20 @@ public class WikipediaSearch {
 		System.out.println("EXPECTATION >>> \n\n ...");
 	}
 	
+	 /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+    	System.out.println(">>> Test from Wiki search...");
+        return new TestSuite( WikipediaSearch.class );
+    }
 	
 	// ====================================================
 	// Last 
 	// ====================================================
 	@After
-	public void tearDown() throws Throwable {
+	public void tearDown() {
 		//System.out.println(">>>[TEAR-DOWN] Quiting the driver...");
 		//driver.quit();
 	}

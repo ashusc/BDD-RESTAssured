@@ -3,40 +3,91 @@
   <modelVersion>4.0.0</modelVersion>
 
 	<!--
-		@Dated: January 2018
-		Author: Ashutosh Mishra [NNGExperimental]
-		Sample Project for "BDD with Rest-Assured" 
+		Dated: 14 June 2021 :: 22:29:10Hrs
+		Author: Ashutosh Mishra <@nityagautam> [NNGExperimental]
+		Sample Project for "Cucumber with Rest-Assured"
+		Description: 
 	-->
   	<groupId>org.nng.automation.sample</groupId>
-  	<artifactId>BDD-RESTAssured</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
+  	<artifactId>Cucumber-RestAssured</artifactId>
+  	<version>1.0.1</version>
   	<packaging>jar</packaging>
-
-  	<name>BDD-RESTAssured</name>
+  	<name>Cucumber-RestAssured</name>
   	<url>http://maven.apache.org</url>
 
-	<!-- Maven Project Variables -->
+	<!-- Maven Variables for dependency versions-->
   	<properties>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<!-- Logback module for logging -->
     	<logback.core.version>			1.2.3 </logback.core.version>
 		<logback.classic.version>		1.2.3 </logback.classic.version>
-		<cucumber.java.version>			1.2.5</cucumber.java.version>
-    	<junit.version>					4.12	 </junit.version>
+		
+		<!-- Selenium artifact -->
+		<selenium.java> 3.14.0 </selenium.java>
+		
+		<!-- Cucumber and JUnit -->
+		<cucumber.junit>				6.9.0 </cucumber.junit>
+		<cucumber.java.version>			1.2.5 </cucumber.java.version>
+    	<junit.version>					4.12 </junit.version>
+    	
+    	<!-- Rest Assured -->
 		<restAssured.version>			3.2.0</restAssured.version>
 		<restAssured.jsonPath.version>	3.2.0</restAssured.jsonPath.version>
 		<restAssured.xmlPath.version>	3.2.0</restAssured.xmlPath.version>
 		<restAssured.jsonSchemaValidator.version>	3.2.0</restAssured.jsonSchemaValidator.version>
-		
   	</properties>
 
-	<!-- Maven Project Dependencies -->
+	<!-- 
+		# Project Build configurations goes here
+		# Usually for for mvn <goal> command
+		========================================== 
+	-->
+	<build>
+		<plugins>
+			
+			<!-- MVN Compiler for source and target : "mvn compile" or "mvn test-compile" -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>3.8.1</version>
+		        <configuration>
+		            <!-- put your configurations here -->
+		            <source>1.8.0</source>
+		            <target>1.8.0</target>
+		        </configuration>
+			</plugin>
+			
+			<!-- MVN Surefire which execute the provided code/source: "mvn test" -->
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.0.0-M5</version>
+		        <configuration>
+		        	<!-- Target source to execute -->
+		        	<includes>
+		        		<exclude>**/*CompleteSuiteRunner.java</exclude>
+		        	</includes>
+		        	<!-- For Parallel execution of "methods" with thread count 10 -->
+			        <parallel>methods</parallel>
+			        <threadCount>5</threadCount>
+		        </configuration>
+	        </plugin>
+		</plugins>
+	</build>
+
+	
+	<!-- 
+		# Project Dependencies goes here
+		================================== 
+	-->
   	<dependencies>
   	
+  		<!-- Selenium -->
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 		    <groupId>org.seleniumhq.selenium</groupId>
 		    <artifactId>selenium-java</artifactId>
-		    <version>3.14.0</version>
+		    <version>${selenium.java}</version>
 		</dependency>
   	
   		<!-- Cucumber Java -->
@@ -44,33 +95,37 @@
 		<dependency>
 		    <groupId>info.cukes</groupId>
 		    <artifactId>cucumber-java</artifactId>
-		    <version>1.2.5</version>
+		    <version>${cucumber.java.version}</version>
 		</dependency>
 
 		<!-- Cucumber Core -->
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+		<!-- 
 		<dependency>
 		    <groupId>info.cukes</groupId>
 		    <artifactId>cucumber-core</artifactId>
 		    <version>1.2.5</version>
 		</dependency>
-
+		-->
+		 
 		<!-- Cucumber JUnit -->
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 		<dependency>
 		    <groupId>info.cukes</groupId>
 		    <artifactId>cucumber-junit</artifactId>
-		    <version>1.2.5</version>
+		    <version>${cucumber.java.version}</version>
 		    <scope>test</scope>
 		</dependency>
 		
      	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-		<dependency>
+     	<!-- 
+     	<dependency>
 		    <groupId>io.cucumber</groupId>
 		    <artifactId>cucumber-junit</artifactId>
 		    <version>6.9.0</version>
 		    <scope>test</scope>
 		</dependency>		     	
+		-->
 		
   		<!-- REST ASSURED -->
 	  	<dependency>

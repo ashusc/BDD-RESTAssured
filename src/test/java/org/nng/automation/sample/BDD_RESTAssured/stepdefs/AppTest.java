@@ -24,6 +24,7 @@ public class AppTest extends TestCase
      */
     public static Test suite()
     {
+    	System.out.println(">>> Test from Sample...");
         return new TestSuite( AppTest.class );
     }
 
